@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-
 app.use(express.json());
 
 
@@ -74,8 +73,10 @@ app.delete('/students/:id', (req, res) => {
   res.json({ message: 'Student successfully deleted', deletedStudent });
 });
 
-app.listen(PORT, () => {
-  console.log(`Student Record API running on http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Student Record API running on http://localhost:${PORT}`);
+  });
+}
 
 module.exports = app;

@@ -1,0 +1,12 @@
+{
+  "name": "postlab2",
+  "version": "1.0.0",
+  "description": "Postlab 2 Crypto API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
