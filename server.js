@@ -77,3 +77,5 @@ app.delete('/students/:id', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Student Record API running on http://localhost:${PORT}`);
 });
+
+module.exports = app;
